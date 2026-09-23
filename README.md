@@ -43,3 +43,10 @@ npm run build
 开局优先提供更多有效交换；新补入棋子按递减概率助攻，连续消除越来越快，每手最多 10 轮。当前以轻松解压为主，20 步和原有收集目标保持不变。运行 `node scripts/simulate-game.ts` 可重现固定种子的 300 局模拟，详见 docs/BALANCE.md。
 
 桌面外围背景按窗口宽高比自动切换 4:3、16:9、21:9 三种构图。宽度不超过 660px 时仅显示原游戏，外围图片不加入游戏预加载。
+
+## EdgeOne 发布
+
+线上地址：https://pages.weilanx.com/games/mooncake-match/
+
+子目录构建：`npm run build -- --base=/games/mooncake-match/`。
+将构建产物放入 `../weilanx-pages/public/games/mooncake-match/`，在聚合站运行 `npm run build`，然后部署整个聚合站的 `dist` 到 `weilanx-pages`。不要单独部署游戏目录覆盖聚合站。

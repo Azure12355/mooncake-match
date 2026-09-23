@@ -7,7 +7,7 @@ import { loadPreferences, savePreferences } from './storage'
 import { useAudio } from './useAudio'
 import './App.css'
 
-const image = (id: string) => `/assets/images/${id}.png`
+const image = (id: string) => `${import.meta.env.BASE_URL}assets/images/${id}.png`
 const tileNames = Object.fromEntries(tiles)
 const tools: { id: Tool; title: string; detail: string; prompt: string }[] = [
   { id: 'hammer', title: '锤子', detail: '消除一格', prompt: '点选一个棋子，轻轻敲掉它' },

@@ -9,7 +9,7 @@ export function useAudio(music: boolean, effects: boolean) {
   useEffect(() => {
     const sounds = ['bgm', 'swap', 'invalid', 'match', 'tool', 'win', 'lose'] as const
     for (const id of sounds) {
-      const audio = new Audio(`/assets/audio/${id}.wav`)
+      const audio = new Audio(`${import.meta.env.BASE_URL}assets/audio/${id}.wav`)
       audio.loop = id === 'bgm'
       audio.volume = id === 'bgm' ? 0.24 : 0.55
       bank.current[id] = audio
