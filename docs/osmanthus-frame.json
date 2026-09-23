@@ -1,0 +1,11 @@
+{
+  "asset": "public/assets/images/frame-options/01-osmanthus.png",
+  "name": "桂花鎏金",
+  "generator": "built-in imagegen",
+  "size": [
+    887,
+    1774
+  ],
+  "prompt": "Single tall portrait 1:2 frame for Mid-Autumn mooncake game. Warm honey walnut carved wood with rich burnished gold leaf osmanthus relief, delicate incised winding branches, corner blossoms. Ancient Chinese gilded craftsmanship, incised seal-engraving treatment. Single connected narrow frame, localized ornamental corners, transparent center and outside silhouette. Orthographic view, tactile wood grain, soft Q-style game asset bevels. No nested frames, text, scene or labels.",
+  "integration": "border-image slice 240; border width 64px; no fill; inset scene preserves ornamental silhouette. Selected by user."
+}

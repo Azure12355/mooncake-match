@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Mooncake Happy';
+  src: url('/assets/fonts/ZCOOLKuaiLe-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root { font-family: 'Mooncake Happy', 'Yuanti SC', 'YouYuan', sans-serif; color: #653725; background: #172c4c; font-synthesis: none; font-weight: 400; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: default; }
+button:focus-visible { outline: 3px solid #286bd0; outline-offset: 2px; }
+button, img { -webkit-user-select: none; user-select: none; }
+img { display: block; max-width: 100%; }
+
+strong, b { font-weight: 400; }
+
+/* Outer artwork loads only when the viewport has room around the game. */
+@media (min-width: 661px) {
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: #172c4c url('/assets/images/outer-compact.png') center / cover no-repeat;
+  }
+  #root { position: relative; z-index: 1; }
+}
+@media (min-width: 661px) and (min-aspect-ratio: 3/2) {
+  body::before { background-image: url('/assets/images/outer-desktop.png'); }
+}
+@media (min-width: 661px) and (min-aspect-ratio: 21/10) {
+  body::before { background-image: url('/assets/images/outer-wide.png'); }
+}

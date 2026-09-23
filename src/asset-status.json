@@ -1,0 +1,162 @@
+[
+  {
+    "id": "background",
+    "status": "generated",
+    "width": 941,
+    "height": 1672,
+    "bytes": 1983982,
+    "alpha": false
+  },
+  {
+    "id": "tile-classic",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1951008,
+    "alpha": true
+  },
+  {
+    "id": "tile-rose",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1596138,
+    "alpha": true
+  },
+  {
+    "id": "tile-matcha",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1505765,
+    "alpha": true
+  },
+  {
+    "id": "tile-snow",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1121497,
+    "alpha": true
+  },
+  {
+    "id": "tile-yolk",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1626663,
+    "alpha": true
+  },
+  {
+    "id": "tile-cocoa",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1425978,
+    "alpha": true
+  },
+  {
+    "id": "tile-rabbit",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1044250,
+    "alpha": true
+  },
+  {
+    "id": "tile-lantern",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 950677,
+    "alpha": true
+  },
+  {
+    "id": "tool-hammer",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1024833,
+    "alpha": true
+  },
+  {
+    "id": "tool-shuffle",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1068211,
+    "alpha": true
+  },
+  {
+    "id": "tool-rainbow",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1556437,
+    "alpha": true
+  },
+  {
+    "id": "tool-bomb",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1212137,
+    "alpha": true
+  },
+  {
+    "id": "title",
+    "status": "generated",
+    "width": 1774,
+    "height": 887,
+    "bytes": 1321975,
+    "alpha": true
+  },
+  {
+    "id": "panel",
+    "status": "generated",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 1100484,
+    "alpha": true
+  },
+  {
+    "id": "button",
+    "status": "generated",
+    "width": 2172,
+    "height": 724,
+    "bytes": 964691,
+    "alpha": true
+  },
+  {
+    "id": "icon-settings",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1142491,
+    "alpha": true
+  },
+  {
+    "id": "effect-sparkle",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 875629,
+    "alpha": true
+  },
+  {
+    "id": "result-win",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1332438,
+    "alpha": true
+  },
+  {
+    "id": "result-lose",
+    "status": "generated",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1127599,
+    "alpha": true
+  }
+]

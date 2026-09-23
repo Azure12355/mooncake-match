@@ -1,0 +1,13 @@
+{
+  "games": 300,
+  "policy": "Seeds 1–300, choose uniformly among valid swaps, no tools",
+  "actions": 2595,
+  "openingMoves": 11.843333333333334,
+  "chainRate": 0.9622350674373795,
+  "fourPlusRate": 0.7236994219653179,
+  "meanRounds": 4.352986512524085,
+  "meanTiles": 13.914836223506743,
+  "maxRounds": 9,
+  "winRate": 0.9966666666666667,
+  "meanMovesPerGame": 8.65
+}

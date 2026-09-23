@@ -1,0 +1,10 @@
+{
+  "asset": "public/assets/images/game-wood-frame.png",
+  "generator": "built-in imagegen",
+  "size": [
+    1254,
+    1254
+  ],
+  "prompt": "Single continuous narrow rounded warm honey walnut wooden game UI frame. Polished wood, subtle grain, soft bevels, tiny engraved osmanthus blossoms with muted gold accents at four corners. Transparent empty center and outer corners. Orthographic front view. Straight rail middles for nine-slice stretching into a portrait frame. No nested frames, no inset floating outlines, no background, no text. Q-style Mid-Autumn mooncake game illustration. Brown wood dominates.",
+  "integration": "CSS border-image slice 160, border width 40px; no fill. Replaces both previous outer gold outlines and inner panel frame."
+}
