@@ -1,52 +1,73 @@
-# 月饼消消乐
+<h1 align="center">Mooncake Match</h1>
+<p align="center"><img src="./public/assets/images/tile-classic.png" width="128" height="128" alt="Mooncake"></p>
+<p align="center"><strong>A cozy Mid-Autumn match-three game, built with React, Vite and TypeScript.</strong></p>
+<p align="center">
+  <a href="./LICENSE"><img alt="MIT code license" src="https://img.shields.io/badge/code-MIT-blue"></a>
+  <a href="https://github.com/Azure12355/mooncake-match/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Azure12355/mooncake-match"></a>
+</p>
+<p align="center"><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
 
-React + Vite + TypeScript 纯前端中秋三消小游戏，手机竖屏优先，电脑居中展示。20 步内收集花纹月饼 12 个、兔子 8 个和灯笼 8 个。无需后端。
+[Play online](https://pages.weilanx.com/games/mooncake-match/)
 
-已实现相邻点击/滑动交换、匹配与连锁、四种道具、死局免费重排、胜负结算、设置和重开、背景音乐和音效，以及本地最高分与声音设置。刷新开始新局，不保存棋盘。
+## Features
 
-## 本地运行
+- Swap adjacent tiles by tapping or swiping on an 8 × 7 board with eight tile types.
+- Collect 12 classic mooncakes, 8 rabbits and 8 lanterns within 20 moves.
+- Frequent cascades, four free tools and automatic reshuffling when no move remains.
+- Responsive single-screen layout, gilded osmanthus frame and desktop festival backgrounds.
+- Music/effect toggles, background-tab audio pause and locally saved best score.
 
-使用 Node.js 24 或更高版本（测试使用 Node 原生 TypeScript 支持）。
+Pure frontend: no accounts, backend, payments or online leaderboard. Reloading starts a new game. Music begins after interaction. The public build uses synthesized music; the live demo may use different music.
+
+## Quick start
+
+Use Node.js 24 and npm. From the repository root:
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
-手动打开终端输出的本地地址。若默认端口被占用，Vite 自动选择空闲端口。
+Open the address printed by Vite.
 
 ```sh
 npm test
 npm run lint
 npm run build
+node scripts/simulate-game.ts
 ```
 
-## 文件
+Build output is `dist/`. For subdirectory hosting, supply the actual base path, for example:
 
-- `docs/PRD.md`：游戏规则、交互及验收要求。
-- `docs/PLAN.md`：实现进度与待验收项目。
-- `docs/ASSETS.md`：20 张核心图片与 7 个音频清单；另有 3 张外围背景，见 `docs/OUTER-BACKGROUNDS.md`。
-- `docs/image-prompts.json`：内置 imagegen 的最终生成提示词。
-- `src/game.ts`：纯函数规则引擎和动画步骤。
-- `src/App.tsx`：游戏界面、点击/触摸操作、动画播放和弹窗。
-- `src/useAudio.ts`：首次交互解锁、后台暂停及声音开关。
-- `src/storage.ts`：仅保存最高分和声音设置。
-- `tests/`：规则和本地存储测试。
-- `scripts/generate-audio.py`：本地原创合成音频，可复现。
+```sh
+npm run build -- --base=/games/mooncake-match/
+```
 
-全部图片由内置 imagegen 生成，背景以外的 19 张带透明通道。原始 PNG 总计约 24.7 MiB，首屏会等待素材加载，失败可重试；音频为原创程序合成 WAV，不是 imagegen 输出。
+## Agent Quickstart
 
-20 项单元测试、类型检查、lint 和生产构建已通过。尚未进行浏览器交互、实际音频试听、截图视觉及试玩难度验收；未部署或发布。
+Read [AGENTS.md](./AGENTS.md) before editing. Keep changes scoped; preserve unrelated work and existing artwork. Browser interaction requires the user's explicit consent. Never publish credentials or private music.
 
-## 连消模式
+| Source | Purpose |
+|---|---|
+| [PRD](./docs/PRD.md) | Product rules and scope |
+| `src/config.ts` | Board, targets, tools and cascade tuning |
+| `src/game.ts` | Pure rule engine and animation plans |
+| `src/App.tsx`, `src/App.css`, `src/index.css` | UI, input and screen fitting |
+| `src/useAudio.ts`, `src/storage.ts` | Audio and preferences |
+| `tests/` | Rule and storage validation |
+| [Balance notes](./docs/BALANCE.md) | Reproducible 300-game simulation |
+| [Asset inventory](./docs/ASSETS.md) | Assets and generation prompts |
 
-开局优先提供更多有效交换；新补入棋子按递减概率助攻，连续消除越来越快，每手最多 10 轮。当前以轻松解压为主，20 步和原有收集目标保持不变。运行 `node scripts/simulate-game.ts` 可重现固定种子的 300 局模拟，详见 docs/BALANCE.md。
+Change only relevant implementation and documentation, run the commands above as appropriate, and report actual validation. Rule changes must preserve real matches, exact scoring and the 10-round cascade limit. Probability changes require before/after simulation; simulation does not prove player retention.
 
-桌面外围背景按窗口宽高比自动切换 4:3、16:9、21:9 三种构图。宽度不超过 660px 时仅显示原游戏，外围图片不加入游戏预加载。
+## Validation and limitations
 
-## EdgeOne 发布
+20 unit tests and production build pass. Lint reports two non-blocking state-in-effect warnings. Browser interaction, real audio playback and cross-device visual acceptance have not been completed. Asset availability checks do not substitute for gameplay testing.
 
-线上地址：https://pages.weilanx.com/games/mooncake-match/
+## Contributing and security
 
-子目录构建：`npm run build -- --base=/games/mooncake-match/`。
-将构建产物放入 `../weilanx-pages/public/games/mooncake-match/`，在聚合站运行 `npm run build`，然后部署整个聚合站的 `dist` 到 `weilanx-pages`。不要单独部署游戏目录覆盖聚合站。
+See [CONTRIBUTING.md](./CONTRIBUTING.md) and [SECURITY.md](./SECURITY.md).
+
+## License
+
+Code and documentation use [MIT](./LICENSE). Fonts and artwork have separate terms in [ASSET-LICENSES.md](./ASSET-LICENSES.md). Private music is excluded.

@@ -27,3 +27,7 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# Private music is excluded from open-source builds
+.local-audio/
+public/assets/audio/Spring.m4a
